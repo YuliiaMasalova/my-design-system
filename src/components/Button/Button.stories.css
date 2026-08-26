@@ -1,0 +1,23 @@
+/**
+ * Button.stories.css
+ * Storybook-only. Lets the Hover/Focused stories preview those states without
+ * a real pointer/keyboard event, by mirroring the exact rules from Button.css
+ * under a class instead of a pseudo-class. Same tokens, no new colors
+ * introduced. Never imported outside of Button.stories.tsx.
+ */
+
+.ds-button--force-hover.ds-button--primary {
+  background-color: var(--button-bg-hover);
+}
+.ds-button--force-hover.ds-button--secondary {
+  border-color: var(--button-bg-hover);
+}
+
+.ds-button--force-focus.ds-button--primary {
+  background-color: var(--button-bg-hover);
+  border-color: var(--button-border-active);
+}
+.ds-button--force-focus.ds-button--secondary {
+  border-width: 1.5px;
+  border-color: var(--button-bg-hover);
+}

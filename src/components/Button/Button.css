@@ -1,0 +1,148 @@
+/**
+ * Button.css
+ * Implements the "buttons" component set from Figma (node 2081:1492).
+ * All colors, spacing, radius, and type come from src/tokens/tokens.css
+ * (--button-*, --semantic-*, --color-*, --font-*) — with robust fallbacks
+ * matching the Figma component sizes table.
+ */
+
+.ds-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-family-primary, sans-serif);
+  font-weight: var(--font-weight-medium, 500);
+  line-height: normal;
+  white-space: nowrap;
+  user-select: none;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+  outline: none;
+}
+
+.ds-button:disabled {
+  cursor: not-allowed;
+}
+
+.ds-button__icon {
+  display: inline-flex;
+  flex: none;
+}
+
+.ds-button__icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ds-button__label {
+  white-space: nowrap;
+}
+
+/* ==== Sizes ==== */
+
+.ds-button--small {
+  gap: var(--button-sizes-small-spacing, 4px);
+  padding: var(--button-sizes-small-padding-vertical, 8px) var(--button-sizes-small-padding-horizontal, 16px);
+  border-radius: var(--button-sizes-small-radius, 8px);
+  min-height: 32px;
+  font-size: var(--font-size-12, 12px);
+}
+.ds-button--small .ds-button__icon {
+  width: var(--button-sizes-small-icon-size, 16px);
+  height: var(--button-sizes-small-icon-size, 16px);
+}
+.ds-button--small.ds-button--icon-only {
+  padding: var(--button-sizes-small-padding-full, 8px);
+}
+
+.ds-button--medium {
+  gap: var(--button-sizes-medium-spacing, 8px);
+  padding: var(--button-sizes-medium-padding-vertical, 12px) var(--button-sizes-medium-padding-horizontal, 20px);
+  border-radius: var(--button-sizes-medium-radius, 12px);
+  min-height: 48px;
+  max-height: 48px;
+  font-size: var(--font-size-16, 16px);
+}
+.ds-button--medium .ds-button__icon {
+  width: var(--button-sizes-medium-icon-size, 20px);
+  height: var(--button-sizes-medium-icon-size, 20px);
+}
+.ds-button--medium.ds-button--icon-only {
+  padding: var(--button-sizes-medium-padding-full, 12px);
+}
+
+.ds-button--large {
+  gap: var(--button-sizes-large-spacing, 12px);
+  padding: var(--button-sizes-large-padding-vertical, 16px) var(--button-sizes-large-padding-horizontal, 24px);
+  border-radius: var(--button-sizes-large-radius, 16px);
+  min-height: 64px;
+  font-size: var(--font-size-20, 20px);
+}
+.ds-button--large .ds-button__icon {
+  width: var(--button-sizes-large-icon-size, 24px);
+  height: var(--button-sizes-large-icon-size, 24px);
+}
+.ds-button--large.ds-button--icon-only {
+  padding: var(--button-sizes-large-padding-full, 16px);
+}
+
+/* ==== Primary ==== */
+
+.ds-button--primary {
+  background-color: var(--button-bg-default);
+  color: var(--button-text);
+  border: 1.5px solid transparent;
+}
+
+.ds-button--primary:hover:not(:disabled) {
+  background-color: var(--button-bg-hover);
+}
+
+.ds-button--primary:focus-visible:not(:disabled) {
+  background-color: var(--button-bg-hover);
+  border-color: var(--button-border-active);
+}
+
+.ds-button--primary[data-selected] {
+  background-color: var(--color-blue-700);
+}
+
+.ds-button--primary:disabled {
+  background-color: var(--button-bg-disabled);
+  color: var(--semantic-text-disabled-100);
+}
+
+/* ==== Secondary ==== */
+
+.ds-button--secondary {
+  background-color: transparent;
+  color: var(--semantic-text-body-text-primary);
+  border: 1px solid var(--button-bg-default);
+}
+
+.ds-button--secondary:hover:not(:disabled) {
+  border-color: var(--button-bg-hover);
+}
+
+.ds-button--secondary:focus-visible:not(:disabled) {
+  border-width: 1.5px;
+  border-color: var(--button-bg-hover);
+}
+
+.ds-button--secondary[data-selected] {
+  border-width: 1.5px;
+  border-color: var(--color-blue-700);
+}
+
+.ds-button--secondary:disabled {
+  background-color: var(--button-bg-disabled);
+  border-color: transparent;
+  color: var(--semantic-text-disabled-100);
+}

@@ -1,0 +1,1039 @@
+/**
+ * tokens.css
+ * Auto-generated from src/tokens/tokens.json — regenerate from tokens.json, do not hand-edit values.
+ *
+ * Source: full Variables export of Figma file 4m8yv2o7usGlI32Y1hmxSH
+ * (Primitives, Semantic/Light, Semantic/Dark, Component, Component Sizes, Semantic Grid).
+ *
+ * Layers: primitives -> semantic (Light/Dark) -> component.
+ * Theme switching follows the existing project convention (prefers-color-scheme),
+ * matching src/index.css. Component custom properties reference semantic custom
+ * properties via var(), so they flip automatically under the dark media query below.
+ *
+ * Responsive tokens (grid + typography that vary by breakpoint) are exposed two ways:
+ *  1) explicit per-breakpoint variables, e.g. --typography-heading-h1-desktop-size
+ *  2) a mobile-first cascade of "current" variables, e.g. --typography-heading-h1-size,
+ *     which resolves to the Mobile value by default and is overridden at the Tablet/
+ *     Desktop breakpoints (see the two @media (min-width) blocks near the bottom).
+ */
+
+:root {
+  /* ==== Primitives ==== */
+  /* Figma primitive color/blue/50. */
+  --color-blue-50: #eff6ff;
+  /* Figma primitive color/blue/100. */
+  --color-blue-100: #dbeafe;
+  /* Figma primitive color/blue/200. */
+  --color-blue-200: #9bb7f6;
+  /* Figma primitive color/blue/300. */
+  --color-blue-300: #6d96f2;
+  /* Figma primitive color/blue/400. */
+  --color-blue-400: #5182ef;
+  /* Figma primitive color/blue/500. */
+  --color-blue-500: #2563eb;
+  /* Figma primitive color/blue/600. */
+  --color-blue-600: #225ad6;
+  /* Figma primitive color/blue/700. */
+  --color-blue-700: #1d4ed8;
+  /* Figma primitive color/blue/800. */
+  --color-blue-800: #2b4fb4;
+  /* Figma primitive color/blue/900. */
+  --color-blue-900: #1e3a8a;
+  /* Figma primitive color/gray/50. */
+  --color-gray-50: #f9fafb;
+  /* Figma primitive color/gray/100. */
+  --color-gray-100: #eceff2;
+  /* Figma primitive color/gray/200. */
+  --color-gray-200: #d5dce2;
+  /* Figma primitive color/gray/300. */
+  --color-gray-300: #b0bec9;
+  /* Figma primitive color/gray/400. */
+  --color-gray-400: #859cab;
+  /* Figma primitive color/gray/500. */
+  --color-gray-500: #667f91;
+  /* Figma primitive color/gray/600. */
+  --color-gray-600: #516778;
+  /* Figma primitive color/gray/700. */
+  --color-gray-700: #425362;
+  /* Figma primitive color/gray/800. */
+  --color-gray-800: #394753;
+  /* Figma primitive color/gray/900. */
+  --color-gray-900: #0f1218;
+  /* Figma primitive color/gray/white. */
+  --color-gray-white: #ffffff;
+  /* Figma primitive color/gray/transparent. Alpha channel restored to 00 — the CSV export dropped it; verified against the Figma API (get_variable_defs) which returned #ffffff00. */
+  --color-gray-transparent: #ffffff00;
+  /* Figma primitive color/red/50. */
+  --color-red-50: #fff1f2;
+  /* Figma primitive color/red/100. */
+  --color-red-100: #ffe4e6;
+  /* Figma primitive color/red/200. */
+  --color-red-200: #fecdd3;
+  /* Figma primitive color/red/300. */
+  --color-red-300: #fda4af;
+  /* Figma primitive color/red/400. */
+  --color-red-400: #fb7185;
+  /* Figma primitive color/red/500. */
+  --color-red-500: #f43f5e;
+  /* Figma primitive color/red/600. */
+  --color-red-600: #e11d48;
+  /* Figma primitive color/red/700. */
+  --color-red-700: #be123c;
+  /* Figma primitive color/red/800. */
+  --color-red-800: #9f1239;
+  /* Figma primitive color/red/900. */
+  --color-red-900: #881337;
+  /* Figma primitive color/red/950. */
+  --color-red-950: #4c0519;
+  /* Figma primitive color/green/50. */
+  --color-green-50: #ecfdf5;
+  /* Figma primitive color/green/100. */
+  --color-green-100: #d1fae5;
+  /* Figma primitive color/green/200. */
+  --color-green-200: #a7f3d0;
+  /* Figma primitive color/green/300. */
+  --color-green-300: #6ee7b7;
+  /* Figma primitive color/green/400. */
+  --color-green-400: #34d399;
+  /* Figma primitive color/green/500. */
+  --color-green-500: #10b981;
+  /* Figma primitive color/green/600. */
+  --color-green-600: #059669;
+  /* Figma primitive color/green/700. */
+  --color-green-700: #047857;
+  /* Figma primitive color/green/800. */
+  --color-green-800: #065f46;
+  /* Figma primitive color/green/900. */
+  --color-green-900: #064e3b;
+  /* Figma primitive color/yellow/50. */
+  --color-yellow-50: #fffbeb;
+  /* Figma primitive color/yellow/100. */
+  --color-yellow-100: #fef3c7;
+  /* Figma primitive color/yellow/200. */
+  --color-yellow-200: #fde68a;
+  /* Figma primitive color/yellow/300. */
+  --color-yellow-300: #fcd34d;
+  /* Figma primitive color/yellow/400. */
+  --color-yellow-400: #fbbf24;
+  /* Figma primitive color/yellow/500. */
+  --color-yellow-500: #f59e0b;
+  /* Figma primitive color/yellow/600. */
+  --color-yellow-600: #d97706;
+  /* Figma primitive color/yellow/700. */
+  --color-yellow-700: #b45309;
+  /* Figma primitive color/yellow/800. */
+  --color-yellow-800: #92400e;
+  /* Figma primitive color/yellow/900. */
+  --color-yellow-900: #78350f;
+  /* Figma primitive color/yellow/950. */
+  --color-yellow-950: #451a03;
+  /* Figma primitive color/violet/50. */
+  --color-violet-50: #f5f3ff;
+  /* Figma primitive color/violet/100. */
+  --color-violet-100: #ede9fe;
+  /* Figma primitive color/violet/200. */
+  --color-violet-200: #ddd6fe;
+  /* Figma primitive color/violet/300. */
+  --color-violet-300: #c4b5fd;
+  /* Figma primitive color/violet/400. */
+  --color-violet-400: #a78bfa;
+  /* Figma primitive color/violet/500. */
+  --color-violet-500: #8b5cf6;
+  /* Figma primitive color/violet/600. */
+  --color-violet-600: #7c3aed;
+  /* Figma primitive color/violet/700. */
+  --color-violet-700: #6d28d9;
+  /* Figma primitive color/violet/800. */
+  --color-violet-800: #5b21b6;
+  /* Figma primitive color/violet/900. */
+  --color-violet-900: #4c1d95;
+  /* Figma primitive color/violet/950. */
+  --color-violet-950: #2e1065;
+  /* Figma primitive color/base/white. */
+  --color-white: #ffffff;
+  /* Figma primitive color/base/transparent. Alpha channel restored to 00 — the CSV export dropped it; verified against the Figma API (get_variable_defs) which returned #ffffff00. */
+  --color-transparent: #ffffff00;
+  /* Figma primitive color/base/black. */
+  --color-black: #0f1218;
+  /* Radius scale step 0px. Merged from Figma Primitives/radius and Semantic sizes/radius (rd-none). */
+  --radius-0: 0px;
+  /* Radius scale step 4px. Merged from Figma Primitives/radius and Semantic sizes/radius (rd-4). */
+  --radius-4: 4px;
+  /* Radius scale step 8px. Merged from Figma Primitives/radius and Semantic sizes/radius (rd-8). */
+  --radius-8: 8px;
+  /* Radius scale step 12px. Merged from Figma Primitives/radius and Semantic sizes/radius (rd-12). */
+  --radius-12: 12px;
+  /* Radius scale step 16px. Merged from Figma Primitives/radius and Semantic sizes/radius (rd-16). */
+  --radius-16: 16px;
+  /* Radius scale step 20px. Merged from Figma Primitives/radius and Semantic sizes/radius (rd-20). */
+  --radius-20: 20px;
+  /* Radius scale step 24px. Merged from Figma Primitives/radius and Semantic sizes/radius (rd-24). */
+  --radius-24: 24px;
+  /* Radius scale step 32px. Merged from Figma Primitives/radius and Semantic sizes/radius (rd-32). */
+  --radius-32: 32px;
+  /* Radius scale step 40px. Merged from Figma Primitives/radius and Semantic sizes/radius (rd-40). */
+  --radius-40: 40px;
+  /* Radius scale step 200px. Merged from Figma Primitives/radius and Semantic sizes/radius (rd-200). */
+  --radius-200: 200px;
+  /* Radius scale step 9999px. Merged from Figma Primitives/radius and Semantic sizes/radius (rd-9999). */
+  --radius-9999: 9999px;
+  /* Spacing/scale step 0px. Merged from Figma Primitives/scale and Semantic sizes/spacing (sp-none). */
+  --spacing-0: 0px;
+  /* Spacing/scale step 1px. Merged from Figma Primitives/scale and Semantic sizes/spacing (sp-1). */
+  --spacing-1: 1px;
+  /* Spacing/scale step 2px. Merged from Figma Primitives/scale and Semantic sizes/spacing (sp-2). */
+  --spacing-2: 2px;
+  /* Spacing/scale step 4px. Merged from Figma Primitives/scale and Semantic sizes/spacing (sp-4). */
+  --spacing-4: 4px;
+  /* Spacing/scale step 8px. Merged from Figma Primitives/scale and Semantic sizes/spacing (sp-8). */
+  --spacing-8: 8px;
+  /* Spacing/scale step 12px. Merged from Figma Primitives/scale and Semantic sizes/spacing (sp-12). */
+  --spacing-12: 12px;
+  /* Spacing/scale step 16px. Merged from Figma Primitives/scale and Semantic sizes/spacing (sp-16). */
+  --spacing-16: 16px;
+  /* Spacing/scale step 20px. Merged from Figma Primitives/scale and Semantic sizes/spacing (sp-20). */
+  --spacing-20: 20px;
+  /* Spacing/scale step 24px. Merged from Figma Primitives/scale and Semantic sizes/spacing (sp-24). */
+  --spacing-24: 24px;
+  /* Spacing/scale step 28px. Merged from Figma Primitives/scale and Semantic sizes/spacing (sp-28). */
+  --spacing-28: 28px;
+  /* Spacing/scale step 32px. Merged from Figma Primitives/scale and Semantic sizes/spacing (sp-32). */
+  --spacing-32: 32px;
+  /* Spacing/scale step 40px. Merged from Figma Primitives/scale and Semantic sizes/spacing (sp-40). */
+  --spacing-40: 40px;
+  /* Spacing/scale step 48px. Merged from Figma Primitives/scale and Semantic sizes/spacing (sp-48). NOTE: source Figma value for step 48 literally resolves to 40 (looks like a duplicate/typo of the 40 step in the Figma file) — kept as-is for fidelity; verify in Figma. */
+  --spacing-48: 40px;
+  /* Spacing/scale step 52px. Merged from Figma Primitives/scale and Semantic sizes/spacing (sp-52). */
+  --spacing-52: 52px;
+  /* Spacing/scale step 64px. Merged from Figma Primitives/scale and Semantic sizes/spacing (sp-64). */
+  --spacing-64: 64px;
+  /* Spacing/scale step 80px. Merged from Figma Primitives/scale and Semantic sizes/spacing (sp-80). */
+  --spacing-80: 80px;
+  /* Spacing/scale step 120px. Merged from Figma Primitives/scale and Semantic sizes/spacing (sp-120). */
+  --spacing-120: 120px;
+  /* Spacing/scale step 160px. Merged from Figma Primitives/scale and Semantic sizes/spacing (sp-160). */
+  --spacing-160: 160px;
+  /* Spacing/scale step 200px. Merged from Figma Primitives/scale and Semantic sizes/spacing (sp-200). */
+  --spacing-200: 200px;
+  /* Border width step 0px. Figma Semantic sizes/border (bw-none). */
+  --border-width-0: 0px;
+  /* Border width step 1px. Figma Semantic sizes/border (bw-1). */
+  --border-width-1: 1px;
+  /* Border width step 2px. Figma Semantic sizes/border (bw-2). */
+  --border-width-2: 2px;
+  /* Figma font/family/primary. */
+  --font-family-primary: "Inter";
+  /* Figma font/size/12. */
+  --font-size-12: 12px;
+  /* Figma font/size/16. */
+  --font-size-16: 16px;
+  /* Figma font/size/18. */
+  --font-size-18: 18px;
+  /* Figma font/size/20. */
+  --font-size-20: 20px;
+  /* Figma font/size/24. */
+  --font-size-24: 24px;
+  /* Figma font/size/32. */
+  --font-size-32: 32px;
+  /* Figma font/size/40. */
+  --font-size-40: 40px;
+  /* Figma font/size/48. */
+  --font-size-48: 48px;
+  /* Figma font/size/64. */
+  --font-size-64: 64px;
+  /* Figma font/size/72. */
+  --font-size-72: 72px;
+  /* Figma font/height/16 (line-height, expressed in px per source export). */
+  --font-line-height-16: 16px;
+  /* Figma font/height/20 (line-height, expressed in px per source export). */
+  --font-line-height-20: 20px;
+  /* Figma font/height/24 (line-height, expressed in px per source export). */
+  --font-line-height-24: 24px;
+  /* Figma font/height/28 (line-height, expressed in px per source export). */
+  --font-line-height-28: 28px;
+  /* Figma font/height/32 (line-height, expressed in px per source export). */
+  --font-line-height-32: 32px;
+  /* Figma font/height/40 (line-height, expressed in px per source export). */
+  --font-line-height-40: 40px;
+  /* Figma font/height/48 (line-height, expressed in px per source export). */
+  --font-line-height-48: 48px;
+  /* Figma font/height/56 (line-height, expressed in px per source export). */
+  --font-line-height-56: 56px;
+  /* Figma font/height/72 (line-height, expressed in px per source export). */
+  --font-line-height-72: 72px;
+  /* Figma font/spacing/tight (letter-spacing, px per source export — verify unit with design, Figma sometimes tracks this in %). */
+  --font-letter-spacing-tight: -0.5px;
+  /* Figma font/spacing/normal (letter-spacing, px per source export — verify unit with design, Figma sometimes tracks this in %). */
+  --font-letter-spacing-normal: 0px;
+  /* Figma font/spacing/wide (letter-spacing, px per source export — verify unit with design, Figma sometimes tracks this in %). */
+  --font-letter-spacing-wide: 1px;
+  /* Figma font/weight/regular. */
+  --font-weight-regular: 400;
+  /* Figma font/weight/medium. */
+  --font-weight-medium: 500;
+  /* Figma font/weight/semi-bold. */
+  --font-weight-semi-bold: 600;
+  /* Figma font/weight/bold. */
+  --font-weight-bold: 700;
+  /* Figma Semantic Grid/Desktop breakpoint. */
+  --breakpoint-desktop: 1440px;
+  /* Figma Semantic Grid/Tablet breakpoint. */
+  --breakpoint-tablet: 1024px;
+  /* Figma Semantic Grid/Mobile breakpoint. */
+  --breakpoint-mobile: 390px;
+  /* Figma Semantic Grid/Desktop margin. */
+  --grid-desktop-margin: 100px;
+  /* Figma Semantic Grid/Desktop gutter. */
+  --grid-desktop-gutter: 20px;
+  /* Figma Semantic Grid/Desktop card width. */
+  --grid-desktop-card-width: 500px;
+  /* Figma Semantic Grid/Desktop column count. */
+  --grid-desktop-columns: 12;
+  /* Figma Semantic Grid/Tablet margin. */
+  --grid-tablet-margin: 40px;
+  /* Figma Semantic Grid/Tablet gutter. */
+  --grid-tablet-gutter: 20px;
+  /* Figma Semantic Grid/Tablet card width. */
+  --grid-tablet-card-width: 460px;
+  /* Figma Semantic Grid/Tablet column count. */
+  --grid-tablet-columns: 6;
+  /* Figma Semantic Grid/Mobile margin. */
+  --grid-mobile-margin: 20px;
+  /* Figma Semantic Grid/Mobile gutter. */
+  --grid-mobile-gutter: 10px;
+  /* Figma Semantic Grid/Mobile card width. */
+  --grid-mobile-card-width: 350px;
+  /* Figma Semantic Grid/Mobile column count. */
+  --grid-mobile-columns: 2;
+
+  /* ==== Semantic (Light — default) ==== */
+  /* Figma variable, resolved Light value #f9fafb. */
+  --semantic-surface-bg-bg-secondary: var(--color-gray-50);
+  /* Figma variable, resolved Light value #ffffff. */
+  --semantic-surface-bg-bg-primary: var(--color-white);
+  /* Figma variable, resolved Light value #0f1218. */
+  --semantic-surface-bg-bg-inverse: var(--color-black);
+  /* Figma variable, resolved Light value #2563eb. */
+  --semantic-surface-button-bg-default: var(--color-blue-500);
+  /* Figma variable, resolved Light value #6d96f2. */
+  --semantic-surface-button-bg-hover: var(--color-blue-300);
+  /* Figma variable, resolved Light value #d5dce2. */
+  --semantic-surface-button-bg-disabled: var(--color-gray-200);
+  /* Figma variable, resolved Light value #eff6ff. */
+  --semantic-surface-button-bg-secondary-hover: var(--color-blue-50);
+  /* Figma variable, resolved Light value #ffffff. */
+  --semantic-surface-button-bg-secondary-default: var(--color-white);
+  /* Figma variable, resolved Light value #ffffff. */
+  --semantic-surface-input-bg-primary: var(--color-white);
+  /* Figma variable, resolved Light value #f9fafb. */
+  --semantic-surface-input-bg-secondary: var(--color-gray-50);
+  /* Figma variable, resolved Light value #0f1218. */
+  --semantic-surface-input-bg-inverse: var(--color-black);
+  /* Figma variable, resolved Light value #ffffff. */
+  --semantic-surface-card-bg-primary: var(--color-white);
+  /* Figma variable, resolved Light value #f9fafb. */
+  --semantic-surface-card-bg-secondary: var(--color-gray-50);
+  /* Figma variable, resolved Light value #0f1218. */
+  --semantic-surface-card-bg-inverse: var(--color-black);
+  /* Figma variable, resolved Light value #0f1218. */
+  --semantic-surface-tags-default: var(--color-black);
+  /* Figma variable, resolved Light value #425362. */
+  --semantic-surface-tags-hover: var(--color-gray-700);
+  /* Figma variable, resolved Light value #0f1218. */
+  --semantic-surface-tags-bg-inverse: var(--color-black);
+  /* Figma variable, resolved Light value #ffffff. */
+  --semantic-surface-table-row-bg-primary: var(--color-white);
+  /* Figma variable, resolved Light value #eceff2. */
+  --semantic-surface-table-row-bg-hover: var(--color-gray-100);
+  /* Figma variable, resolved Light value #0f1218. */
+  --semantic-surface-table-row-bg-inverse: var(--color-black);
+  /* Figma variable, resolved Light value #7c3aed. */
+  --semantic-text-link-default: var(--color-violet-600);
+  /* Figma variable, resolved Light value #5b21b6. */
+  --semantic-text-link-hover: var(--color-violet-800);
+  /* Figma variable, resolved Light value #8b5cf6. */
+  --semantic-text-link-visited: var(--color-violet-500);
+  /* Figma variable, resolved Light value #10b981. */
+  --semantic-text-success-light: var(--color-green-500);
+  /* Figma variable, resolved Light value #059669. */
+  --semantic-text-success-default: var(--color-green-600);
+  /* Figma variable, resolved Light value #047857. */
+  --semantic-text-success-dark: var(--color-green-700);
+  /* Figma variable, resolved Light value #10b981. */
+  --semantic-text-success-light-2: var(--color-green-500);
+  /* Figma variable, resolved Light value #059669. */
+  --semantic-text-success-default-2: var(--color-green-600);
+  /* Figma variable, resolved Light value #047857. */
+  --semantic-text-success-dark-2: var(--color-green-700);
+  /* Figma variable, resolved Light value #d97706. */
+  --semantic-text-warning-light: var(--color-yellow-600);
+  /* Figma variable, resolved Light value #b45309. */
+  --semantic-text-warning-default: var(--color-yellow-700);
+  /* Figma variable, resolved Light value #92400e. */
+  --semantic-text-warning-dark: var(--color-yellow-800);
+  /* Figma variable, resolved Light value #f43f5e. */
+  --semantic-text-error-light: var(--color-red-500);
+  /* Figma variable, resolved Light value #e11d48. */
+  --semantic-text-error-default: var(--color-red-600);
+  /* Figma variable, resolved Light value #be123c. */
+  --semantic-text-error-dark: var(--color-red-700);
+  /* Figma variable, resolved Light value #b0bec9. */
+  --semantic-text-disabled-100: var(--color-gray-300);
+  /* Figma variable, resolved Light value #859cab. */
+  --semantic-text-disabled-200: var(--color-gray-400);
+  /* Figma variable, resolved Light value #667f91. */
+  --semantic-text-disabled-300: var(--color-gray-500);
+  /* Figma variable, resolved Light value #0f1218. */
+  --semantic-text-heading-text-primary: var(--color-black);
+  /* Figma variable, resolved Light value #eff6ff. */
+  --semantic-text-heading-text-inverse: var(--color-blue-50);
+  /* Figma variable, resolved Light value #1d4ed8. */
+  --semantic-text-heading-text-secondary: var(--color-blue-700);
+  /* Figma variable, resolved Light value #394753. */
+  --semantic-text-body-text-primary: var(--color-gray-800);
+  /* Figma variable, resolved Light value #425362. */
+  --semantic-text-body-text-secondary: var(--color-gray-700);
+  /* Figma variable, resolved Light value #ffffff. */
+  --semantic-text-body-text-inverse: var(--color-white);
+  /* Figma variable, resolved Light value #8b5cf6. (Source Figma variable group is spelled 'infirmation' — kept the token named 'information' here; fix the typo in Figma too.) */
+  --semantic-text-information-light: var(--color-violet-500);
+  /* Figma variable, resolved Light value #7c3aed. (Source Figma variable group is spelled 'infirmation' — kept the token named 'information' here; fix the typo in Figma too.) */
+  --semantic-text-information-default: var(--color-violet-600);
+  /* Figma variable, resolved Light value #6d28d9. (Source Figma variable group is spelled 'infirmation' — kept the token named 'information' here; fix the typo in Figma too.) */
+  --semantic-text-information-dark: var(--color-violet-700);
+  /* Figma variable, resolved Light value #8b5cf6. (Source Figma variable group is spelled 'infirmation' — kept the token named 'information' here; fix the typo in Figma too.) */
+  --semantic-text-information-light-2: var(--color-violet-500);
+  /* Figma variable, resolved Light value #d5dce2. */
+  --semantic-border-disabled-100: var(--color-gray-200);
+  /* Figma variable, resolved Light value #b0bec9. */
+  --semantic-border-disabled-200: var(--color-gray-300);
+  /* Figma variable, resolved Light value #859cab. */
+  --semantic-border-disabled-300: var(--color-gray-400);
+  /* Figma variable, resolved Light value #ddd6fe. */
+  --semantic-border-information-light: var(--color-violet-200);
+  /* Figma variable, resolved Light value #8b5cf6. */
+  --semantic-border-information-default: var(--color-violet-500);
+  /* Figma variable, resolved Light value #6d28d9. */
+  --semantic-border-information-dark: var(--color-violet-700);
+  /* Figma variable, resolved Light value #10b981. */
+  --semantic-border-success-default: var(--color-green-500);
+  /* Figma variable, resolved Light value #047857. */
+  --semantic-border-success-dark: var(--color-green-700);
+  /* Figma variable, resolved Light value #a7f3d0. */
+  --semantic-border-success-light: var(--color-green-200);
+  /* Figma variable, resolved Light value #fde68a. */
+  --semantic-border-warning-light: var(--color-yellow-200);
+  /* Figma variable, resolved Light value #b45309. */
+  --semantic-border-warning-dark: var(--color-yellow-700);
+  /* Figma variable, resolved Light value #f59e0b. */
+  --semantic-border-warning-default: var(--color-yellow-500);
+  /* Figma variable, resolved Light value #fecdd3. */
+  --semantic-border-error-light: var(--color-red-200);
+  /* Figma variable, resolved Light value #f43f5e. */
+  --semantic-border-error-default: var(--color-red-500);
+  /* Figma variable, resolved Light value #be123c. */
+  --semantic-border-error-dark: var(--color-red-700);
+  /* Figma variable, resolved Light value #b0bec9. */
+  --semantic-border-primary-default: var(--color-gray-300);
+  /* Figma variable, resolved Light value #2563eb. */
+  --semantic-border-primary-active: var(--color-blue-500);
+  /* Figma variable, resolved Light value #b0bec9. */
+  --semantic-border-secondary-default: var(--color-gray-300);
+
+  /* ==== Component ==== */
+  /* Figma component/button/text (#ffffff) — theme-invariant, aliased directly to the white primitive. */
+  --button-text: var(--color-white);
+  /* Figma component/button/bg-default, aliased through semantic.surface.button.bg-default so it can flip per theme. */
+  --button-bg-default: var(--semantic-surface-button-bg-default);
+  /* Figma component/button/bg-hover. */
+  --button-bg-hover: var(--semantic-surface-button-bg-hover);
+  /* Figma semantic surface/button/bg-disabled (identical in Light and Dark per source). */
+  --button-bg-disabled: var(--semantic-surface-button-bg-disabled);
+  /* Figma semantic surface/button/bg-secondary-default. */
+  --button-bg-secondary-default: var(--semantic-surface-button-bg-secondary-default);
+  /* Figma semantic surface/button/bg-secondary-hover. */
+  --button-bg-secondary-hover: var(--semantic-surface-button-bg-secondary-hover);
+  /* Figma border/primary/active, reused as the button's active/selected border. */
+  --button-border-active: var(--semantic-border-primary-active);
+  /* Figma Component Sizes/small > button > radius. */
+  --button-sizes-small-radius: var(--radius-8);
+  /* Figma Component Sizes/small > button > spacing. */
+  --button-sizes-small-spacing: var(--spacing-4);
+  /* Figma Component Sizes/small > button > Horizontal padding. */
+  --button-sizes-small-padding-horizontal: var(--spacing-16);
+  /* Figma Component Sizes/small > button > Vertical padding. */
+  --button-sizes-small-padding-vertical: var(--spacing-8);
+  /* Figma Component Sizes/small > button > Full Padding. */
+  --button-sizes-small-padding-full: var(--spacing-8);
+  /* Figma Component Sizes/small > button > icon size. */
+  --button-sizes-small-icon-size: var(--spacing-16);
+  /* Figma Component Sizes/medium > button > radius. */
+  --button-sizes-medium-radius: var(--radius-12);
+  /* Figma Component Sizes/medium > button > spacing. */
+  --button-sizes-medium-spacing: var(--spacing-8);
+  /* Figma Component Sizes/medium > button > Horizontal padding. */
+  --button-sizes-medium-padding-horizontal: var(--spacing-20);
+  /* Figma Component Sizes/medium > button > Vertical padding. */
+  --button-sizes-medium-padding-vertical: var(--spacing-12);
+  /* Figma Component Sizes/medium > button > Full Padding. */
+  --button-sizes-medium-padding-full: var(--spacing-12);
+  /* Figma Component Sizes/medium > button > icon size. */
+  --button-sizes-medium-icon-size: var(--spacing-20);
+  /* Figma Component Sizes/large > button > radius. */
+  --button-sizes-large-radius: var(--radius-16);
+  /* Figma Component Sizes/large > button > spacing. */
+  --button-sizes-large-spacing: var(--spacing-12);
+  /* Figma Component Sizes/large > button > Horizontal padding. */
+  --button-sizes-large-padding-horizontal: var(--spacing-24);
+  /* Figma Component Sizes/large > button > Vertical padding. */
+  --button-sizes-large-padding-vertical: var(--spacing-16);
+  /* Figma Component Sizes/large > button > Full Padding. */
+  --button-sizes-large-padding-full: var(--spacing-16);
+  /* Figma Component Sizes/large > button > icon size. */
+  --button-sizes-large-icon-size: var(--spacing-24);
+  /* Figma component/input/bg. */
+  --input-bg: var(--semantic-surface-input-bg-primary);
+  /* Figma component/input/border-default (#b0bec9 matches border/disabled/200). */
+  --input-border-default: var(--semantic-border-disabled-200);
+  /* Figma component/input/border-error. */
+  --input-border-error: var(--semantic-border-error-default);
+  /* Figma component/input/text. */
+  --input-text: var(--semantic-text-body-text-primary);
+  /* Figma component/input/placeholder (#b0bec9 matches text color/disabled/100). */
+  --input-placeholder: var(--semantic-text-disabled-100);
+  /* Figma Component Sizes/small > input > radius. */
+  --input-sizes-small-radius: var(--radius-8);
+  /* Figma Component Sizes/small > input > spacing. */
+  --input-sizes-small-spacing: var(--spacing-8);
+  /* Figma Component Sizes/small > input > Horizontal padding. */
+  --input-sizes-small-padding-horizontal: var(--spacing-16);
+  /* Figma Component Sizes/small > input > Vertical padding. */
+  --input-sizes-small-padding-vertical: var(--spacing-16);
+  /* Figma Component Sizes/small > input > icon size. */
+  --input-sizes-small-icon-size: var(--spacing-20);
+  /* Figma Component Sizes/medium > input > radius. */
+  --input-sizes-medium-radius: var(--radius-8);
+  /* Figma Component Sizes/medium > input > spacing. */
+  --input-sizes-medium-spacing: var(--spacing-8);
+  /* Figma Component Sizes/medium > input > Horizontal padding. */
+  --input-sizes-medium-padding-horizontal: var(--spacing-16);
+  /* Figma Component Sizes/medium > input > Vertical padding. */
+  --input-sizes-medium-padding-vertical: var(--spacing-16);
+  /* Figma Component Sizes/medium > input > icon size. */
+  --input-sizes-medium-icon-size: var(--spacing-20);
+  /* Figma Component Sizes/large > input > radius. */
+  --input-sizes-large-radius: var(--radius-8);
+  /* Figma Component Sizes/large > input > spacing. */
+  --input-sizes-large-spacing: var(--spacing-8);
+  /* Figma Component Sizes/large > input > Horizontal padding. */
+  --input-sizes-large-padding-horizontal: var(--spacing-16);
+  /* Figma Component Sizes/large > input > Vertical padding. */
+  --input-sizes-large-padding-vertical: var(--spacing-16);
+  /* Figma Component Sizes/large > input > icon size. */
+  --input-sizes-large-icon-size: var(--spacing-20);
+  /* Figma component/card/bg. */
+  --card-bg: var(--semantic-surface-card-bg-primary);
+  /* Figma component/card/border. */
+  --card-border-default: var(--semantic-border-disabled-200);
+  /* Figma component/card/border hover. */
+  --card-border-hover: var(--semantic-border-primary-active);
+  /* Figma component/card/text - title. */
+  --card-text-title: var(--semantic-text-heading-text-primary);
+  /* Figma component/card/text-secondary. */
+  --card-text-secondary: var(--semantic-text-body-text-secondary);
+  /* Figma Component Sizes/small > card > radius. */
+  --card-sizes-small-radius: var(--radius-32);
+  /* Figma Component Sizes/small > card > spacing. */
+  --card-sizes-small-spacing: var(--spacing-12);
+  /* Figma Component Sizes/small > card > Horizontal padding. */
+  --card-sizes-small-padding-horizontal: var(--spacing-32);
+  /* Figma Component Sizes/small > card > Vertical padding. */
+  --card-sizes-small-padding-vertical: var(--spacing-32);
+  /* Figma Component Sizes/medium > card > radius. */
+  --card-sizes-medium-radius: var(--radius-32);
+  /* Figma Component Sizes/medium > card > spacing. */
+  --card-sizes-medium-spacing: var(--spacing-12);
+  /* Figma Component Sizes/medium > card > Horizontal padding. */
+  --card-sizes-medium-padding-horizontal: var(--spacing-32);
+  /* Figma Component Sizes/medium > card > Vertical padding. */
+  --card-sizes-medium-padding-vertical: var(--spacing-32);
+  /* Figma Component Sizes/large > card > radius. */
+  --card-sizes-large-radius: var(--radius-32);
+  /* Figma Component Sizes/large > card > spacing. */
+  --card-sizes-large-spacing: var(--spacing-12);
+  /* Figma Component Sizes/large > card > Horizontal padding. */
+  --card-sizes-large-padding-horizontal: var(--spacing-32);
+  /* Figma Component Sizes/large > card > Vertical padding. */
+  --card-sizes-large-padding-vertical: var(--spacing-32);
+  /* Figma component/call/bg (#ffffff matches the generic surface/bg/bg-primary). */
+  --call-bg: var(--semantic-surface-bg-bg-primary);
+  /* Figma component/Table Row/bg. */
+  --table-row-bg-default: var(--semantic-surface-table-row-bg-primary);
+  /* Figma component/Table Row/bg  Selected (#eceff2 matches surface/Table Row/bg-hover). */
+  --table-row-bg-selected: var(--semantic-surface-table-row-bg-hover);
+  /* Figma component/Table Row/border. */
+  --table-row-border-default: var(--semantic-border-disabled-200);
+  /* Figma component/Table Row/border hover. */
+  --table-row-border-hover: var(--semantic-border-primary-active);
+  /* Figma component/Table Row/text - title. */
+  --table-row-text-title: var(--semantic-text-heading-text-primary);
+  /* Figma Component Sizes/small > Table Row > radius. */
+  --table-row-sizes-small-radius: var(--radius-8);
+  /* Figma Component Sizes/small > Table Row > spacing. */
+  --table-row-sizes-small-spacing: var(--spacing-16);
+  /* Figma Component Sizes/small > Table Row > Horizontal padding. Empty in the Figma export — treated as 0; verify the intended value in Figma. */
+  --table-row-sizes-small-padding-horizontal: var(--spacing-0);
+  /* Figma Component Sizes/small > Table Row > Vertical padding. */
+  --table-row-sizes-small-padding-vertical: var(--spacing-4);
+  /* Figma Component Sizes/medium > Table Row > radius. */
+  --table-row-sizes-medium-radius: var(--radius-8);
+  /* Figma Component Sizes/medium > Table Row > spacing. */
+  --table-row-sizes-medium-spacing: var(--spacing-16);
+  /* Figma Component Sizes/medium > Table Row > Horizontal padding. Empty in the Figma export — treated as 0; verify the intended value in Figma. */
+  --table-row-sizes-medium-padding-horizontal: var(--spacing-0);
+  /* Figma Component Sizes/medium > Table Row > Vertical padding. */
+  --table-row-sizes-medium-padding-vertical: var(--spacing-4);
+  /* Figma Component Sizes/large > Table Row > radius. */
+  --table-row-sizes-large-radius: var(--radius-8);
+  /* Figma Component Sizes/large > Table Row > spacing. */
+  --table-row-sizes-large-spacing: var(--spacing-16);
+  /* Figma Component Sizes/large > Table Row > Horizontal padding. Empty in the Figma export — treated as 0; verify the intended value in Figma. */
+  --table-row-sizes-large-padding-horizontal: var(--spacing-0);
+  /* Figma Component Sizes/large > Table Row > Vertical padding. */
+  --table-row-sizes-large-padding-vertical: var(--spacing-4);
+  /* Figma Component Sizes/small > cell > radius. */
+  --cell-sizes-small-radius: var(--radius-8);
+  /* Figma Component Sizes/small > cell > spacing. Empty in the Figma export — treated as 0; verify the intended value in Figma. */
+  --cell-sizes-small-spacing: var(--spacing-0);
+  /* Figma Component Sizes/small > cell > Horizontal padding. */
+  --cell-sizes-small-padding-horizontal: var(--spacing-24);
+  /* Figma Component Sizes/small > cell > Vertical padding. */
+  --cell-sizes-small-padding-vertical: var(--spacing-16);
+  /* Figma Component Sizes/medium > cell > radius. */
+  --cell-sizes-medium-radius: var(--radius-8);
+  /* Figma Component Sizes/medium > cell > spacing. Empty in the Figma export — treated as 0; verify the intended value in Figma. */
+  --cell-sizes-medium-spacing: var(--spacing-0);
+  /* Figma Component Sizes/medium > cell > Horizontal padding. */
+  --cell-sizes-medium-padding-horizontal: var(--spacing-24);
+  /* Figma Component Sizes/medium > cell > Vertical padding. */
+  --cell-sizes-medium-padding-vertical: var(--spacing-16);
+  /* Figma Component Sizes/large > cell > radius. */
+  --cell-sizes-large-radius: var(--radius-8);
+  /* Figma Component Sizes/large > cell > spacing. Empty in the Figma export — treated as 0; verify the intended value in Figma. */
+  --cell-sizes-large-spacing: var(--spacing-0);
+  /* Figma Component Sizes/large > cell > Horizontal padding. */
+  --cell-sizes-large-padding-horizontal: var(--spacing-24);
+  /* Figma Component Sizes/large > cell > Vertical padding. */
+  --cell-sizes-large-padding-vertical: var(--spacing-16);
+  /* Figma Semantic Grid/Desktop Typography/Headings/H1/family. */
+  --typography-heading-h1-desktop-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Desktop Typography/Headings/H1/size. */
+  --typography-heading-h1-desktop-size: var(--font-size-64);
+  /* Figma Semantic Grid/Desktop Typography/Headings/H1/weight. */
+  --typography-heading-h1-desktop-weight: var(--font-weight-bold);
+  /* Figma Semantic Grid/Tablet Typography/Headings/H1/family. */
+  --typography-heading-h1-tablet-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Tablet Typography/Headings/H1/size. */
+  --typography-heading-h1-tablet-size: var(--font-size-48);
+  /* Figma Semantic Grid/Tablet Typography/Headings/H1/weight. */
+  --typography-heading-h1-tablet-weight: var(--font-weight-bold);
+  /* Figma Semantic Grid/Mobile Typography/Headings/H1/family. */
+  --typography-heading-h1-mobile-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Mobile Typography/Headings/H1/size. */
+  --typography-heading-h1-mobile-size: var(--font-size-40);
+  /* Figma Semantic Grid/Mobile Typography/Headings/H1/weight. */
+  --typography-heading-h1-mobile-weight: var(--font-weight-bold);
+  /* Figma Semantic Grid/Desktop Typography/Headings/H2/family. */
+  --typography-heading-h2-desktop-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Desktop Typography/Headings/H2/size. */
+  --typography-heading-h2-desktop-size: var(--font-size-40);
+  /* Figma Semantic Grid/Desktop Typography/Headings/H2/weight. */
+  --typography-heading-h2-desktop-weight: var(--font-weight-bold);
+  /* Figma Semantic Grid/Tablet Typography/Headings/H2/family. */
+  --typography-heading-h2-tablet-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Tablet Typography/Headings/H2/size. */
+  --typography-heading-h2-tablet-size: var(--font-size-40);
+  /* Figma Semantic Grid/Tablet Typography/Headings/H2/weight. */
+  --typography-heading-h2-tablet-weight: var(--font-weight-bold);
+  /* Figma Semantic Grid/Mobile Typography/Headings/H2/family. */
+  --typography-heading-h2-mobile-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Mobile Typography/Headings/H2/size. */
+  --typography-heading-h2-mobile-size: var(--font-size-32);
+  /* Figma Semantic Grid/Mobile Typography/Headings/H2/weight. */
+  --typography-heading-h2-mobile-weight: var(--font-weight-bold);
+  /* Figma Semantic Grid/Desktop Typography/Headings/H3/family. */
+  --typography-heading-h3-desktop-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Desktop Typography/Headings/H3/size. */
+  --typography-heading-h3-desktop-size: var(--font-size-24);
+  /* Figma Semantic Grid/Desktop Typography/Headings/H3/weight. */
+  --typography-heading-h3-desktop-weight: var(--font-weight-bold);
+  /* Figma Semantic Grid/Tablet Typography/Headings/H3/family. */
+  --typography-heading-h3-tablet-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Tablet Typography/Headings/H3/size. */
+  --typography-heading-h3-tablet-size: var(--font-size-20);
+  /* Figma Semantic Grid/Tablet Typography/Headings/H3/weight. */
+  --typography-heading-h3-tablet-weight: var(--font-weight-bold);
+  /* Figma Semantic Grid/Mobile Typography/Headings/H3/family. */
+  --typography-heading-h3-mobile-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Mobile Typography/Headings/H3/size. */
+  --typography-heading-h3-mobile-size: var(--font-size-18);
+  /* Figma Semantic Grid/Mobile Typography/Headings/H3/weight. */
+  --typography-heading-h3-mobile-weight: var(--font-weight-bold);
+  /* Figma Semantic Grid/Desktop Typography/Body/base/family. */
+  --typography-body-base-desktop-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Desktop Typography/Body/base/size. */
+  --typography-body-base-desktop-size: var(--font-size-18);
+  /* Figma Semantic Grid/Desktop Typography/Body/base/weight. */
+  --typography-body-base-desktop-weight: var(--font-weight-regular);
+  /* Figma Semantic Grid/Tablet Typography/Body/base/family. */
+  --typography-body-base-tablet-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Tablet Typography/Body/base/size. */
+  --typography-body-base-tablet-size: var(--font-size-18);
+  /* Figma Semantic Grid/Tablet Typography/Body/base/weight. */
+  --typography-body-base-tablet-weight: var(--font-weight-regular);
+  /* Figma Semantic Grid/Mobile Typography/Body/base/family. */
+  --typography-body-base-mobile-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Mobile Typography/Body/base/size. */
+  --typography-body-base-mobile-size: var(--font-size-18);
+  /* Figma Semantic Grid/Mobile Typography/Body/base/weight. */
+  --typography-body-base-mobile-weight: var(--font-weight-regular);
+  /* Figma Semantic Grid/Desktop Typography/Body/text small/family. */
+  --typography-body-text-small-desktop-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Desktop Typography/Body/text small/size. */
+  --typography-body-text-small-desktop-size: var(--font-size-16);
+  /* Figma Semantic Grid/Desktop Typography/Body/text small/weight. */
+  --typography-body-text-small-desktop-weight: var(--font-weight-regular);
+  /* Figma Semantic Grid/Tablet Typography/Body/text small/family. */
+  --typography-body-text-small-tablet-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Tablet Typography/Body/text small/size. */
+  --typography-body-text-small-tablet-size: var(--font-size-16);
+  /* Figma Semantic Grid/Tablet Typography/Body/text small/weight. */
+  --typography-body-text-small-tablet-weight: var(--font-weight-regular);
+  /* Figma Semantic Grid/Mobile Typography/Body/text small/family. */
+  --typography-body-text-small-mobile-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Mobile Typography/Body/text small/size. */
+  --typography-body-text-small-mobile-size: var(--font-size-16);
+  /* Figma Semantic Grid/Mobile Typography/Body/text small/weight. */
+  --typography-body-text-small-mobile-weight: var(--font-weight-regular);
+  /* Figma Semantic Grid/Desktop Typography/Body/caption/family. */
+  --typography-body-caption-desktop-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Desktop Typography/Body/caption/size. */
+  --typography-body-caption-desktop-size: var(--font-size-12);
+  /* Figma Semantic Grid/Desktop Typography/Body/caption/weight. */
+  --typography-body-caption-desktop-weight: var(--font-weight-regular);
+  /* Figma Semantic Grid/Tablet Typography/Body/caption/family. */
+  --typography-body-caption-tablet-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Tablet Typography/Body/caption/size. */
+  --typography-body-caption-tablet-size: var(--font-size-12);
+  /* Figma Semantic Grid/Tablet Typography/Body/caption/weight. */
+  --typography-body-caption-tablet-weight: var(--font-weight-regular);
+  /* Figma Semantic Grid/Mobile Typography/Body/caption/family. */
+  --typography-body-caption-mobile-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Mobile Typography/Body/caption/size. */
+  --typography-body-caption-mobile-size: var(--font-size-12);
+  /* Figma Semantic Grid/Mobile Typography/Body/caption/weight. */
+  --typography-body-caption-mobile-weight: var(--font-weight-regular);
+  /* Figma Semantic Grid/Desktop Typography/Body/bold/family. */
+  --typography-body-bold-desktop-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Desktop Typography/Body/bold/size. */
+  --typography-body-bold-desktop-size: var(--font-size-18);
+  /* Figma Semantic Grid/Desktop Typography/Body/bold/weight. */
+  --typography-body-bold-desktop-weight: var(--font-weight-bold);
+  /* Figma Semantic Grid/Tablet Typography/Body/bold/family. */
+  --typography-body-bold-tablet-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Tablet Typography/Body/bold/size. */
+  --typography-body-bold-tablet-size: var(--font-size-18);
+  /* Figma Semantic Grid/Tablet Typography/Body/bold/weight. */
+  --typography-body-bold-tablet-weight: var(--font-weight-bold);
+  /* Figma Semantic Grid/Mobile Typography/Body/bold/family. */
+  --typography-body-bold-mobile-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Mobile Typography/Body/bold/size. */
+  --typography-body-bold-mobile-size: var(--font-size-16);
+  /* Figma Semantic Grid/Mobile Typography/Body/bold/weight. */
+  --typography-body-bold-mobile-weight: var(--font-weight-bold);
+  /* Figma Semantic Grid/Desktop Typography/Display/family. Matches Semantic Grid/Desktop > Typography > Display; consolidated into component.typography.display.desktop below to avoid duplicating an identical, theme-invariant value. */
+  --typography-display-desktop-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Desktop Typography/Display/size. */
+  --typography-display-desktop-size: var(--font-size-72);
+  /* Figma Semantic Grid/Desktop Typography/Display/weight. */
+  --typography-display-desktop-weight: var(--font-weight-bold);
+  /* Figma Semantic Grid/Tablet Typography/Display/family. */
+  --typography-display-tablet-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Tablet Typography/Display/size. */
+  --typography-display-tablet-size: var(--font-size-64);
+  /* Figma Semantic Grid/Tablet Typography/Display/weight. */
+  --typography-display-tablet-weight: var(--font-weight-bold);
+  /* Figma Semantic Grid/Mobile Typography/Display/family. */
+  --typography-display-mobile-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Mobile Typography/Display/size. */
+  --typography-display-mobile-size: var(--font-size-48);
+  /* Figma Semantic Grid/Mobile Typography/Display/weight. */
+  --typography-display-mobile-weight: var(--font-weight-bold);
+
+  /* ==== Responsive (mobile-first base = Mobile breakpoint) ==== */
+  /* Figma Semantic Grid/Mobile Typography/Body/base/family. */
+  --typography-body-base-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Mobile Typography/Body/base/size. */
+  --typography-body-base-size: var(--font-size-18);
+  /* Figma Semantic Grid/Mobile Typography/Body/base/weight. */
+  --typography-body-base-weight: var(--font-weight-regular);
+  /* Figma Semantic Grid/Mobile Typography/Body/bold/family. */
+  --typography-body-bold-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Mobile Typography/Body/bold/size. */
+  --typography-body-bold-size: var(--font-size-16);
+  /* Figma Semantic Grid/Mobile Typography/Body/bold/weight. */
+  --typography-body-bold-weight: var(--font-weight-bold);
+  /* Figma Semantic Grid/Mobile Typography/Body/caption/family. */
+  --typography-body-caption-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Mobile Typography/Body/caption/size. */
+  --typography-body-caption-size: var(--font-size-12);
+  /* Figma Semantic Grid/Mobile Typography/Body/caption/weight. */
+  --typography-body-caption-weight: var(--font-weight-regular);
+  /* Figma Semantic Grid/Mobile Typography/Body/text small/family. */
+  --typography-body-text-small-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Mobile Typography/Body/text small/size. */
+  --typography-body-text-small-size: var(--font-size-16);
+  /* Figma Semantic Grid/Mobile Typography/Body/text small/weight. */
+  --typography-body-text-small-weight: var(--font-weight-regular);
+  /* Figma Semantic Grid/Mobile Typography/Display/family. */
+  --typography-display-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Mobile Typography/Display/size. */
+  --typography-display-size: var(--font-size-48);
+  /* Figma Semantic Grid/Mobile Typography/Display/weight. */
+  --typography-display-weight: var(--font-weight-bold);
+  /* Figma Semantic Grid/Mobile Typography/Headings/H1/family. */
+  --typography-heading-h1-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Mobile Typography/Headings/H1/size. */
+  --typography-heading-h1-size: var(--font-size-40);
+  /* Figma Semantic Grid/Mobile Typography/Headings/H1/weight. */
+  --typography-heading-h1-weight: var(--font-weight-bold);
+  /* Figma Semantic Grid/Mobile Typography/Headings/H2/family. */
+  --typography-heading-h2-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Mobile Typography/Headings/H2/size. */
+  --typography-heading-h2-size: var(--font-size-32);
+  /* Figma Semantic Grid/Mobile Typography/Headings/H2/weight. */
+  --typography-heading-h2-weight: var(--font-weight-bold);
+  /* Figma Semantic Grid/Mobile Typography/Headings/H3/family. */
+  --typography-heading-h3-family: var(--font-family-primary);
+  /* Figma Semantic Grid/Mobile Typography/Headings/H3/size. */
+  --typography-heading-h3-size: var(--font-size-18);
+  /* Figma Semantic Grid/Mobile Typography/Headings/H3/weight. */
+  --typography-heading-h3-weight: var(--font-weight-bold);
+  /* Figma Semantic Grid/Mobile breakpoint. */
+  --breakpoint: 390px;
+  /* Figma Semantic Grid/Mobile card width. */
+  --grid-card-width: 350px;
+  /* Figma Semantic Grid/Mobile column count. */
+  --grid-columns: 2;
+  /* Figma Semantic Grid/Mobile gutter. */
+  --grid-gutter: 10px;
+  /* Figma Semantic Grid/Mobile margin. */
+  --grid-margin: 20px;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --typography-body-base-family: var(--font-family-primary);
+    --typography-body-base-size: var(--font-size-18);
+    --typography-body-base-weight: var(--font-weight-regular);
+    --typography-body-bold-family: var(--font-family-primary);
+    --typography-body-bold-size: var(--font-size-18);
+    --typography-body-bold-weight: var(--font-weight-bold);
+    --typography-body-caption-family: var(--font-family-primary);
+    --typography-body-caption-size: var(--font-size-12);
+    --typography-body-caption-weight: var(--font-weight-regular);
+    --typography-body-text-small-family: var(--font-family-primary);
+    --typography-body-text-small-size: var(--font-size-16);
+    --typography-body-text-small-weight: var(--font-weight-regular);
+    --typography-display-family: var(--font-family-primary);
+    --typography-display-size: var(--font-size-64);
+    --typography-display-weight: var(--font-weight-bold);
+    --typography-heading-h1-family: var(--font-family-primary);
+    --typography-heading-h1-size: var(--font-size-48);
+    --typography-heading-h1-weight: var(--font-weight-bold);
+    --typography-heading-h2-family: var(--font-family-primary);
+    --typography-heading-h2-size: var(--font-size-40);
+    --typography-heading-h2-weight: var(--font-weight-bold);
+    --typography-heading-h3-family: var(--font-family-primary);
+    --typography-heading-h3-size: var(--font-size-20);
+    --typography-heading-h3-weight: var(--font-weight-bold);
+    --breakpoint: 1024px;
+    --grid-card-width: 460px;
+    --grid-columns: 6;
+    --grid-gutter: 20px;
+    --grid-margin: 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --typography-body-base-family: var(--font-family-primary);
+    --typography-body-base-size: var(--font-size-18);
+    --typography-body-base-weight: var(--font-weight-regular);
+    --typography-body-bold-family: var(--font-family-primary);
+    --typography-body-bold-size: var(--font-size-18);
+    --typography-body-bold-weight: var(--font-weight-bold);
+    --typography-body-caption-family: var(--font-family-primary);
+    --typography-body-caption-size: var(--font-size-12);
+    --typography-body-caption-weight: var(--font-weight-regular);
+    --typography-body-text-small-family: var(--font-family-primary);
+    --typography-body-text-small-size: var(--font-size-16);
+    --typography-body-text-small-weight: var(--font-weight-regular);
+    --typography-display-family: var(--font-family-primary);
+    --typography-display-size: var(--font-size-72);
+    --typography-display-weight: var(--font-weight-bold);
+    --typography-heading-h1-family: var(--font-family-primary);
+    --typography-heading-h1-size: var(--font-size-64);
+    --typography-heading-h1-weight: var(--font-weight-bold);
+    --typography-heading-h2-family: var(--font-family-primary);
+    --typography-heading-h2-size: var(--font-size-40);
+    --typography-heading-h2-weight: var(--font-weight-bold);
+    --typography-heading-h3-family: var(--font-family-primary);
+    --typography-heading-h3-size: var(--font-size-24);
+    --typography-heading-h3-weight: var(--font-weight-bold);
+    --breakpoint: 1440px;
+    --grid-card-width: 500px;
+    --grid-columns: 12;
+    --grid-gutter: 20px;
+    --grid-margin: 100px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* ==== Semantic (Dark) ==== */
+    /* Figma variable, resolved Dark value #394753. */
+    --semantic-surface-bg-bg-secondary: var(--color-gray-800);
+    /* Figma variable, resolved Dark value #0f1218. */
+    --semantic-surface-bg-bg-primary: var(--color-black);
+    /* Figma variable, resolved Dark value #f9fafb. */
+    --semantic-surface-bg-bg-inverse: var(--color-gray-50);
+    /* Figma variable, resolved Dark value #2563eb. */
+    --semantic-surface-button-bg-default: var(--color-blue-500);
+    /* Figma variable, resolved Dark value #5182ef. */
+    --semantic-surface-button-bg-hover: var(--color-blue-400);
+    /* Figma variable, resolved Dark value #d5dce2. */
+    --semantic-surface-button-bg-disabled: var(--color-gray-200);
+    /* Figma variable, resolved Dark value #eff6ff. */
+    --semantic-surface-button-bg-secondary-hover: var(--color-blue-50);
+    /* Figma variable, resolved Dark value #ffffff. */
+    --semantic-surface-button-bg-secondary-default: var(--color-white);
+    /* Figma variable, resolved Dark value #394753. */
+    --semantic-surface-input-bg-primary: var(--color-gray-800);
+    /* Figma variable, resolved Dark value #425362. */
+    --semantic-surface-input-bg-secondary: var(--color-gray-700);
+    /* Figma variable, resolved Dark value #eceff2. */
+    --semantic-surface-input-bg-inverse: var(--color-gray-100);
+    /* Figma variable, resolved Dark value #394753. */
+    --semantic-surface-card-bg-primary: var(--color-gray-800);
+    /* Figma variable, resolved Dark value #425362. */
+    --semantic-surface-card-bg-secondary: var(--color-gray-700);
+    /* Figma variable, resolved Dark value #eceff2. */
+    --semantic-surface-card-bg-inverse: var(--color-gray-100);
+    /* Figma variable, resolved Dark value #0f1218. */
+    --semantic-surface-tags-default: var(--color-black);
+    /* Figma variable, resolved Dark value #394753. */
+    --semantic-surface-tags-hover: var(--color-gray-800);
+    /* Figma variable, resolved Dark value #f9fafb. */
+    --semantic-surface-tags-bg-inverse: var(--color-gray-50);
+    /* Figma variable, resolved Dark value #394753. */
+    --semantic-surface-table-row-bg-primary: var(--color-gray-800);
+    /* Figma variable, resolved Dark value #425362. */
+    --semantic-surface-table-row-bg-hover: var(--color-gray-700);
+    /* Figma variable, resolved Dark value #eceff2. */
+    --semantic-surface-table-row-bg-inverse: var(--color-gray-100);
+    /* Figma variable, resolved Dark value #a78bfa. */
+    --semantic-text-link-default: var(--color-violet-400);
+    /* Figma variable, resolved Dark value #c4b5fd. */
+    --semantic-text-link-hover: var(--color-violet-300);
+    /* Figma variable, resolved Dark value #8b5cf6. */
+    --semantic-text-link-visited: var(--color-violet-500);
+    /* Figma variable, resolved Dark value #34d399. */
+    --semantic-text-success-light: var(--color-green-400);
+    /* Figma variable, resolved Dark value #34d399. */
+    --semantic-text-success-default: var(--color-green-400);
+    /* Figma variable, resolved Dark value #6ee7b7. */
+    --semantic-text-success-dark: var(--color-green-300);
+    /* Figma variable, resolved Dark value #34d399. */
+    --semantic-text-success-light-2: var(--color-green-400);
+    /* Figma variable, resolved Dark value #34d399. */
+    --semantic-text-success-default-2: var(--color-green-400);
+    /* Figma variable, resolved Dark value #6ee7b7. */
+    --semantic-text-success-dark-2: var(--color-green-300);
+    /* Figma variable, resolved Dark value #fbbf24. */
+    --semantic-text-warning-light: var(--color-yellow-400);
+    /* Figma variable, resolved Dark value #fcd34d. */
+    --semantic-text-warning-default: var(--color-yellow-300);
+    /* Figma variable, resolved Dark value #fde68a. */
+    --semantic-text-warning-dark: var(--color-yellow-200);
+    /* Figma variable, resolved Dark value #fb7185. */
+    --semantic-text-error-light: var(--color-red-400);
+    /* Figma variable, resolved Dark value #fb7185. */
+    --semantic-text-error-default: var(--color-red-400);
+    /* Figma variable, resolved Dark value #fda4af. */
+    --semantic-text-error-dark: var(--color-red-300);
+    /* Figma variable, resolved Dark value #425362. */
+    --semantic-text-disabled-100: var(--color-gray-700);
+    /* Figma variable, resolved Dark value #516778. */
+    --semantic-text-disabled-200: var(--color-gray-600);
+    /* Figma variable, resolved Dark value #667f91. */
+    --semantic-text-disabled-300: var(--color-gray-500);
+    /* Figma variable, resolved Dark value #ffffff. */
+    --semantic-text-heading-text-primary: var(--color-white);
+    /* Figma variable, resolved Dark value #eff6ff. */
+    --semantic-text-heading-text-inverse: var(--color-blue-50);
+    /* Figma variable, resolved Dark value #2563eb. */
+    --semantic-text-heading-text-secondary: var(--color-blue-500);
+    /* Figma variable, resolved Dark value #ffffff. */
+    --semantic-text-body-text-primary: var(--color-white);
+    /* Figma variable, resolved Dark value #859cab. */
+    --semantic-text-body-text-secondary: var(--color-gray-400);
+    /* Figma variable, resolved Dark value #0f1218. */
+    --semantic-text-body-text-inverse: var(--color-black);
+    /* Figma variable, resolved Dark value #a78bfa. (Source Figma variable group is spelled 'infirmation' — kept the token named 'information' here; fix the typo in Figma too.) */
+    --semantic-text-information-light: var(--color-violet-400);
+    /* Figma variable, resolved Dark value #a78bfa. (Source Figma variable group is spelled 'infirmation' — kept the token named 'information' here; fix the typo in Figma too.) */
+    --semantic-text-information-default: var(--color-violet-400);
+    /* Figma variable, resolved Dark value #c4b5fd. (Source Figma variable group is spelled 'infirmation' — kept the token named 'information' here; fix the typo in Figma too.) */
+    --semantic-text-information-dark: var(--color-violet-300);
+    /* Figma variable, resolved Dark value #a78bfa. (Source Figma variable group is spelled 'infirmation' — kept the token named 'information' here; fix the typo in Figma too.) */
+    --semantic-text-information-light-2: var(--color-violet-400);
+    /* Figma variable, resolved Dark value #425362. */
+    --semantic-border-disabled-100: var(--color-gray-700);
+    /* Figma variable, resolved Dark value #516778. */
+    --semantic-border-disabled-200: var(--color-gray-600);
+    /* Figma variable, resolved Dark value #667f91. */
+    --semantic-border-disabled-300: var(--color-gray-500);
+    /* Figma variable, resolved Dark value #5b21b6. */
+    --semantic-border-information-light: var(--color-violet-800);
+    /* Figma variable, resolved Dark value #8b5cf6. */
+    --semantic-border-information-default: var(--color-violet-500);
+    /* Figma variable, resolved Dark value #c4b5fd. */
+    --semantic-border-information-dark: var(--color-violet-300);
+    /* Figma variable, resolved Dark value #10b981. */
+    --semantic-border-success-default: var(--color-green-500);
+    /* Figma variable, resolved Dark value #34d399. */
+    --semantic-border-success-dark: var(--color-green-400);
+    /* Figma variable, resolved Dark value #065f46. */
+    --semantic-border-success-light: var(--color-green-800);
+    /* Figma variable, resolved Dark value #92400e. */
+    --semantic-border-warning-light: var(--color-yellow-800);
+    /* Figma variable, resolved Dark value #fcd34d. */
+    --semantic-border-warning-dark: var(--color-yellow-300);
+    /* Figma variable, resolved Dark value #f59e0b. */
+    --semantic-border-warning-default: var(--color-yellow-500);
+    /* Figma variable, resolved Dark value #9f1239. */
+    --semantic-border-error-light: var(--color-red-800);
+    /* Figma variable, resolved Dark value #f43f5e. */
+    --semantic-border-error-default: var(--color-red-500);
+    /* Figma variable, resolved Dark value #fda4af. */
+    --semantic-border-error-dark: var(--color-red-300);
+    /* Figma variable, resolved Dark value #425362. */
+    --semantic-border-primary-default: var(--color-gray-700);
+    /* Figma variable, resolved Dark value #2563eb. */
+    --semantic-border-primary-active: var(--color-blue-500);
+    /* Figma variable, resolved Dark value #516778. */
+    --semantic-border-secondary-default: var(--color-gray-600);
+  }
+}
+
