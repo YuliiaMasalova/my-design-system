@@ -40,10 +40,27 @@ export interface ButtonProps
   iconOnly?: boolean;
   /** Toggled/active state. Maps to Figma `state=Selected`; exposed as `aria-pressed`. @default false */
   selected?: boolean;
+  /**
+   * Disabled state. Maps to Figma `state=Disabled`. Renders the native
+   * `disabled` attribute, which removes the button from the tab order and
+   * from the accessibility tree's set of actionable elements — no extra
+   * `aria-disabled` is needed alongside it.
+   * @default false
+   */
+  disabled?: boolean;
   /** Button label. Omitted from the DOM when `iconOnly` is set. */
   children?: ReactNode;
 }
 
+/**
+ * Accessible, token-driven button — wraps a native `<button>` so standard
+ * keyboard and screen reader behavior comes for free: `Enter`/`Space`
+ * activates it, `Tab`/`Shift+Tab` move focus to/from it (skipped entirely
+ * when `disabled`), and assistive tech announces its accessible name plus
+ * `disabled`/`aria-pressed` state without any extra ARIA wiring from
+ * callers. See `Button.mdx` (Storybook docs) for full usage guidelines,
+ * do's/don'ts, and accessibility notes.
+ */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   {
     variant = 'primary',

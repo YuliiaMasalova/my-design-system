@@ -1,0 +1,87 @@
+import { Meta, Title, Subtitle, Primary, Controls, Stories } from '@storybook/addon-docs/blocks';
+
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+<Title />
+
+<Subtitle>Design-system button — Figma node `2081:1492`</Subtitle>
+
+A single, token-driven `<button>` that covers every variant, size, icon
+placement, and interaction state defined in the Figma **buttons** component
+set. It never introduces its own colors, spacing, or radii — everything
+comes from `src/tokens/tokens.css` (`--button-*`, `--semantic-*`,
+`--color-*`, `--font-*`), so it stays in sync automatically whenever the
+design tokens are regenerated from Figma.
+
+## Usage
+
+```tsx
+import { Button } from './components/Button';
+
+<Button variant="primary" size="medium">
+  Save changes
+</Button>
+```
+
+With an icon:
+
+```tsx
+import { Button } from './components/Button';
+import { ArrowUpRightIcon } from './icons';
+
+<Button variant="secondary" icon={<ArrowUpRightIcon />} iconPosition="left">
+  Open link
+</Button>
+
+// Icon-only — aria-label is required, there is no visible text.
+<Button variant="primary" icon={<ArrowUpRightIcon />} iconOnly aria-label="Open link" />
+```
+
+<Primary />
+
+<Controls />
+
+## Do's and Don'ts
+
+**Do**
+
+- Use `variant="primary"` for the single most important action in a view; keep `secondary` for everything else so the primary action stays visually distinct.
+- Write a short, verb-led label ("Save changes", not "Changes will be saved").
+- Set `aria-label` whenever `iconOnly` is used — the button has no other accessible name.
+- Let `disabled` reflect a real, temporary reason (form incomplete, request in flight) rather than hiding an action a user might reasonably expect to see.
+- Reuse the existing `size` scale (`small` / `medium` / `large`) instead of overriding padding or font-size with custom CSS.
+
+**Don't**
+
+- Don't use more than one `primary` button in the same view or section — it removes the visual hierarchy the variant exists to create.
+- Don't rely on color alone to convey `disabled`. The native `disabled` attribute already removes the button from the tab order and reports it correctly to assistive tech — don't fake a "disabled look" on a button that's still clickable.
+- Don't put an icon on both sides — `icon` + `iconPosition` renders one icon at a time; for two-icon needs, compose a custom layout instead of stretching this component.
+- Don't nest other interactive elements (links, checkboxes, other buttons) inside `children` — it breaks keyboard navigation and screen reader semantics.
+- Don't override `font-size` or `padding` per instance; add a new `size` to the design tokens instead, so Figma and code stay in sync.
+
+## Accessibility
+
+`Button` renders a native `<button>` element, so most accessibility behavior
+comes for free. This section documents what that guarantees, and what
+callers still need to handle themselves.
+
+### Keyboard
+
+- **Tab** moves focus to the button in the page's natural tab order; **Shift+Tab** moves back. A `disabled` button is skipped entirely — it never receives focus.
+- **Enter** and **Space** both activate the button — standard native `<button>` behavior, no extra key handling required.
+- Focus is visible via `:focus-visible` (keyboard/programmatic focus only, no ring on mouse click), styled with the same `border/primary/active` token used in Figma's Focused state.
+- No keyboard trap: this is a single native control with no internal focus management, so focus always moves in and out normally.
+
+### Screen reader
+
+- The label (`children`) is read as the button's accessible name automatically — no extra ARIA needed for a labeled button.
+- `iconOnly` buttons have **no visible text**, so `aria-label` (or `aria-labelledby`) is required. Without it, screen readers announce an unlabeled "button", which fails WCAG 4.1.2 (Name, Role, Value). The `@storybook/addon-a11y` panel on each story flags this automatically when it's missing.
+- `selected` sets `aria-pressed="true"`, telling assistive tech this is a two-state toggle button (matching Figma's `state=Selected`). Only use it for buttons that behave like a toggle — for "currently on this page" style indicators, use `aria-current` instead.
+- `disabled` uses the native `disabled` attribute, which prevents interaction, is announced as unavailable by screen readers, and removes the element from the tab order — no additional `aria-disabled` is needed alongside it.
+- `icon` is rendered with `aria-hidden="true"` internally, so it's never announced twice alongside the label or `aria-label`.
+
+## All stories
+
+<Stories />

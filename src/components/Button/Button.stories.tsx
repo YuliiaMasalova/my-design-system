@@ -23,14 +23,19 @@ function ArrowUpRightIcon() {
  * Button — design system component (Figma node 2081:1492).
  *
  * `component: Button` + plain `args` (no custom `render`) means every story
- * below is a thin, real usage of the component: Storybook's autodocs and the
- * "Show code" panel display the actual JSX Button is rendered with, and the
- * Controls panel is generated straight from ButtonProps.
+ * below is a thin, real usage of the component: the "Show code" panel
+ * displays the actual JSX Button is rendered with, and the Controls panel
+ * is generated straight from ButtonProps.
+ *
+ * No `tags: ['autodocs']` here — the Docs page for this component is
+ * hand-authored in `Button.mdx` (usage guidelines, do's/don'ts, a11y notes)
+ * via `<Meta of={ButtonStories} />`, which attaches to this file and
+ * replaces the auto-generated page. It still appears in the sidebar exactly
+ * like autodocs — only the content is custom instead of templated.
  */
 const meta: Meta<typeof Button> = {
   title: 'Components/Button',
   component: Button,
-  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },
